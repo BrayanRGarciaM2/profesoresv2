@@ -1,0 +1,64 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales y de respaldo
+*.log
+*.tmp
+*.swp
+*.bak
+*.orig
+
+# Configuraciones de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de entorno/local
+.env
+.env.*
+
+# WordPress core (si no deseas incluirlo)
+wp-admin/
+wp-includes/
+
+# Archivos de configuración generados automáticamente
+wp-config.php
+wp-config.back
+wp-config-sample.php
+.htaccess
+web.config
+readme.html
+license.txt
+
+# Carpeta de uploads (generalmente no se versiona)
+wp-content/uploads/
+
+# Plugins y themes de terceros (si usas composer o los gestionas manualmente)
+wp-content/plugins/*
+wp-content/themes/*
+
+# Excepto tu tema/plugin personalizado (descomenta y edita según el nombre real)
+!wp-content/themes/templatedisctrap/
+!wp-content/themes/templatedisctrap/**
+!wp-content/themes/templatedisctrap_profesores/
+!wp-content/themes/templatedisctrap_profesores/**
+!wp-content/plugins/discacademia/
+!wp-content/plugins/discacademia/**
+!wp-content/plugins/discprofesores/
+!wp-content/plugins/discprofesores/**
+
+# Cache
+cache/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+
+# Node & Composer (si los usas)
+node_modules/
+vendor/
+package-lock.json
+yarn.lock
+composer.lock

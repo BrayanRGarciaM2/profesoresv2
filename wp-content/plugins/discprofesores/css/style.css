@@ -1,0 +1,200 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 6/05/2016, 04:41:54 PM
+    Author     : da.salinas3247
+*/
+
+/*
+Estilos para el catalogo en forma de columnas de proyectos
+*/
+
+ul.rig {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.rig li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+ul.rig li h3 {
+	margin: 0 0 5px;
+}
+ul.rig li p {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #999;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.rig {
+		margin-left: 0;
+	}
+	ul.rig li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+
+}
+@media (max-width: 992px) {
+	/* class for 3 columns passed to 2 columns */
+        ul.rig.columns-3 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+        }
+}
+
+@media (max-width: 768px) {
+	/* class for 3 columns passed to 1 columns */
+        ul.rig.columns-3 li {
+	width: 97.5%; /* this value + 2.5 should = 100% */
+        }
+}
+
+.cero-espacios{
+    margin: 0px;
+    padding: 0px;
+}
+
+.img-profesor{
+	max-width: 250px;
+	width: auto;
+  height: auto;
+}
+
+.img-profesor
+
+.info-profesor{
+	margin-top: -20px;
+
+}
+
+/*************** Colores para el box de profesores ***************/
+.box-profesor{
+  -webkit-box-shadow: 6px 9px 7px -8px rgba(0,0,0,0.64);
+  -moz-box-shadow: 6px 9px 7px -8px rgba(0,0,0,0.64);
+  box-shadow: 6px 9px 7px -8px rgba(0,0,0,0.64);
+  background: #fefefe;
+  padding: 25px 25px 15px 25px;
+  min-height: 240px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box-color-grupo, .box-color-comit::before, .box-color-ticsw::before, .box-color-imagine::before{
+	position: absolute;;
+  bottom: -21px;
+  right: 46%;
+  color: white;
+  font-weight: bold;
+}
+
+.box-color-comit::before{
+  content: "COMIT";
+}
+.box-color-comit{
+  border-bottom:20px solid #EB621A;
+	border-top:4px solid #EB621A;
+}
+
+.box-color-ticsw::before{
+	content: "TICSw";
+}
+.box-color-ticsw{
+  border-bottom:20px solid #50ADE8;
+	border-top:4px solid #50ADE8;
+}
+
+.box-color-imagine::before{
+	content: "IMAGINE";
+}
+.box-color-imagine{
+  border-bottom:20px solid #50B237;
+	border-top:4px solid #50B237;
+}
+
+.box-color-disc{
+  border-bottom:20px solid #083F5B;
+	border-top:4px solid #083F5B;
+}
+
+/*************** CSS para el Flip de la tarjeta de profesores  ****************/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 100%;
+	height: 315px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

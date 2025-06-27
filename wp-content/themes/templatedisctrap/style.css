@@ -1,0 +1,366 @@
+
+
+/*
+Theme Name: DISC Bootstrap Development
+Theme URI: https://sistemas.uniandes.edu.co
+Description: Tema para el Departamento de Ingeniería de Sistemas y Computación usando Boostrap 3.3.5. Aunque soporta multiples nivles en la navegación no se recomienda usarlos. La versión 1.5 soluciona bug con las zonas de widgets e incluye fontawsome
+Author: Álvaro Gómez D'Alleman
+Author URI: https://sistemas.uniandes.edu.co/~alvar-go
+Version: 1.5
+Tags: responsive, bootstrap
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+
+
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-theme.css');
+@import url('fontawsome/font-awesome.css');
+@import url('//fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('//fonts.googleapis.com/css?family=Roboto:400,700,900,300');
+
+body {
+     padding-top: 30px;
+     padding-bottom: 40px;
+     font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+a.btn{
+    font-weight: bold;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus
+{
+    color: #dddddd;
+}
+.navbar-nav> li > a
+{
+    color: #dddddd;
+}
+.dropdown-menu > li > a {
+    color: #888;
+}
+
+.titulo{
+  /*margin-top: 30px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eeeeee;
+
+  display: block;
+  background-image:  url('images/squares.svg');
+  background-repeat: repeat-x;
+}
+.pie,
+.pie > p
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #eeeeee;
+  font-size: 12px !important;
+  text-align: center;
+  display: block;
+  margin-bottom: 1px;
+}
+.nombre-depto
+{
+    padding-top: 2px !important;
+}
+
+.boton-menu-movil
+{
+    color:#dddddd;
+}
+
+.boton-menu-movil-lateral
+{
+    color:#dddddd;
+    background-color: #1c1c1a;
+}
+
+.logo-uniandes
+{
+  display: block;
+  text-indent: 125px;
+  width: 125px;
+  height: 50px;
+  margin-right: 10px;
+  background: url('images/escudoUniandes.svg');
+  background-size: 125px 50px;
+}
+
+.logo-uniandes>a
+{
+    color: #dddddd;
+}
+
+.logo-uniandes:hover, .logo-uniandes:active, .logo-uniandes:focus
+{
+  color: #dddddd;
+}
+
+#wpadminbar
+{
+    position: static !important;
+}
+
+.img-disc-encabezado{
+    width:150px;
+    height:150px;
+    vertical-align:middle;
+}
+
+.texto-claro{
+    color: #888888;
+}
+
+.fila-comentario
+{
+    border-bottom: 3px #eeeeee solid;
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+img.wp-post-image {
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+/* Inicio Clases para menú multinivel */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+/* Fin Clases para menú multinivel */
+/*Clases para el menú lateral*/
+.list-group.panel > .list-group-item {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+   background-color: #083F5B;/* OJO cambiar para temas hijos */
+  color: #dddddd;
+}
+/*fin clases menú lateral*/
+/*convertir la navegación lateral en superior*/
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+}
+.titulo-disc{
+
+  position: relative;
+  left: 5%;
+
+}
+
+@media (max-width: 810px) {
+
+  .titulo-disc{
+		position: relative;
+		left: 12%;
+	}
+
+}
+
+//Las clases a continuación generan el color del programa -- Modificar si se quiere hacer un template hijo
+
+a
+{
+    color: #083f5b;
+
+}
+a:hover, a:focus{
+    color: #839fad;
+}
+
+.navbar-default-mati
+{
+  background-color: #083f5b;
+
+}
+
+.navbar-nav> li > a:hover,
+.navbar-nav> li > a:active,
+.navbar-nav> li > a:focus,
+.titulo
+{
+    color: #083f5b;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus
+{
+    background-color: #083f5b;
+    background-image: -webkit-linear-gradient(top, #083f5b 0%, #839fad 100%);
+    background-image:      -o-linear-gradient(top, #083f5b 0%, #839fad 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#083f5b), to(#839fad));
+    background-image:         linear-gradient(to bottom, #083f5b 0%, #839fad 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff083f5b', endColorstr='#ff839fad', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border-color: #839fad;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  border-color: #083f5b;
+  color: #083f5b;
+}
+
+.btn-disc
+{
+  background-image: -webkit-linear-gradient(top, #083f5b 0%, #839fad 100%);
+  background-image:      -o-linear-gradient(top, #083f5b 0%, #839fad 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#083f5b), to(#839fad));
+  background-image:         linear-gradient(to bottom, #083f5b 0%, #839fad 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff083f5b', endColorstr='#ff839fad', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #839fad;
+  color: #ffffff;
+}
+
+.badge-disc
+{
+    background-color: #083f5b;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus
+{
+    background-color: #083f5b;
+}
+
+.bg-disc{
+    background-color: #083f5b;
+    color: #ffffff;
+}
+.table > thead > tr > td.disc, .table > tbody > tr > td.disc, .table > tfoot > tr > td.disc, .table > thead > tr > th.disc, .table > tbody > tr > th.disc, .table > tfoot > tr > th.disc, .table > thead > tr.disc > td, .table > tbody > tr.disc > td, .table > tfoot > tr.disc > td, .table > thead > tr.disc > th, .table > tbody > tr.disc > th, .table > tfoot > tr.disc > th{
+    background-color: #839fad;
+}
+
+.alert-disc
+{
+     background-color: #b1c3cb; /* Este color debe ser más claro que el color claro del programa*/
+     color: #083f5b;
+}
+
+.label-disc
+{
+    background-color: #083f5b;
+}
+
+.pagination > li > a, .pagination > li > span,
+.pagination > li >a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus
+{
+    color: #083f5b;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    background-color: #083f5b;
+}
+
+.list-group-item-disc{
+    background-color: #b1c3cb; /* Este color debe ser más claro que el color claro del programa*/
+    color: #083f5b;
+}
+
+.panel-disc > .panel-heading{
+  background-image: -webkit-linear-gradient(top, #083f5b 0%, #083f5b 100%);
+  background-image:      -o-linear-gradient(top, #083f5b 0%, #083f5b 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#083f5b), to(#083f5b));
+  background-image:         linear-gradient(to bottom, #083f5b 0%, #083f5b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff083f5b', endColorstr='#ff083f5b', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  background-color: #083f5b;
+  color: #fff;
+}
+
+.panel-disc
+{
+    border-color: #083f5b;
+}
+
+.progress-bar-disc
+{
+  background-image: -webkit-linear-gradient(top, #083f5b 0%, #839fad 100%);
+  background-image:      -o-linear-gradient(top, #083f5b 0%, #839fad 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#083f5b), to(#839fad));
+  background-image:         linear-gradient(to bottom, #083f5b 0%, #839fad 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff083f5b', endColorstr='#ff839fad', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+    background-color: #083f5b;
+}
